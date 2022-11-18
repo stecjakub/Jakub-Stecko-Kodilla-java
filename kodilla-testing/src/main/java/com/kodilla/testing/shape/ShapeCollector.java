@@ -28,4 +28,8 @@ public class ShapeCollector {
             System.out.println(s);
         }
     }
+    public int getFigureAmount(){
+        return shapes.size();
+    }
+
 }
