@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookLibrary {
-    private LibraryDataBase libraryDatabase;
+    LibraryDatabase libraryDatabase;
 
-    public BookLibrary(LibraryDataBase libraryDatabase) {
+    public BookLibrary(LibraryDatabase libraryDatabase) {
         this.libraryDatabase = libraryDatabase;
     }
 
@@ -18,10 +18,5 @@ public class BookLibrary {
         if (resultList.size() > 20) return bookList;
         bookList = resultList;
         return bookList;
-    }
-
-    List<Book> listBooksInHandsOf(LibraryUser libraryUser) {
-        return null;
-
     }
 }

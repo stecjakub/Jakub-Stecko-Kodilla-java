@@ -41,6 +41,7 @@ public class LibraryUser {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         LibraryUser that = (LibraryUser) o;
 
         return Objects.equals(firstname, that.firstname) &&
@@ -53,4 +54,3 @@ public class LibraryUser {
         return Objects.hash(firstname, lastname, peselId);
     }
 }
-
