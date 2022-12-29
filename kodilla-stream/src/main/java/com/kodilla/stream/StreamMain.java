@@ -46,7 +46,7 @@ public class StreamMain {
         poemBeautifier.beautify("This is the third method", something -> "ACB " + something);
         poemBeautifier.beautify("This is the fourth method", something -> " ' " + something + " ' ");
 
-        System.out.println("Using Stream to generate even numbers from 1 to 20");
+        System.out.println("Using Stream to generate even numbers from 1 to 20 ");
         NumbersGenerator.generateEven(20);
 
         System.out.println("Lambda");
