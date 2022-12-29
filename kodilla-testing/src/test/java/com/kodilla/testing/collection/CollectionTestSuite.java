@@ -31,6 +31,7 @@ public class CollectionTestSuite {
         List<Integer> oddNumbers = Arrays.asList(31,315,26,85,31,64,26,90,111,2);
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
         List<Integer> result = oddNumbersExterminator.exterminate(oddNumbers);
-        Assertions.assertEquals(3, result.size());
+        System.out.println(result.size());
+        Assertions.assertEquals(5, result.size());
     }
 }
