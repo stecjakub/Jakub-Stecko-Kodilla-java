@@ -7,7 +7,7 @@ public class ExceptionHandling {
             secondChallenge.probablyIWillThrowException(2,3);
         }catch(Exception e){
             System.out.println("Exception worked");
-        }finally{
+        }finally {
             System.out.println("End");
         }
     }

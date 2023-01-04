@@ -10,7 +10,7 @@ public class SecondChallengeTestSuite {
 
         SecondChallenge secondChallenge = new SecondChallenge();
 
-        assertAll(
+        assertAll (
                 () -> assertThrows(Exception.class, () -> secondChallenge.probablyIWillThrowException(2, 3)),
                 () -> assertThrows(Exception.class, () -> secondChallenge.probablyIWillThrowException(0, 3)),
                 () -> assertThrows(Exception.class, () -> secondChallenge.probablyIWillThrowException(1.5, 1.5)),
