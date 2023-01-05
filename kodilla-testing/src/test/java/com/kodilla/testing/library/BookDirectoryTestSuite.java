@@ -85,4 +85,18 @@ public class BookDirectoryTestSuite {
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
         assertTrue(false);
     }
+    @Test
+    void listBooksInHandsOf0(){
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
+
+    }
+    @Test
+    void listBooksInHandsOf1(){
+
+    }
+    @Test
+    void listBooksInHandsOf5(){
+
+    }
+
 }
