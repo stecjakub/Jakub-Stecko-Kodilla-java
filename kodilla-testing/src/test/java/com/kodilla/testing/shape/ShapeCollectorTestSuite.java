@@ -5,7 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class ShapeCollectorTestSuite {
-    @DisplayName("Adding elements Test")
+    @DisplayName("Adding elements Test ")
     @Test
     public void addingElementsTest() {
         ShapeCollector collectorAdd = new ShapeCollector();

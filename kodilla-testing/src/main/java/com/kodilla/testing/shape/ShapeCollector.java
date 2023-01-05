@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ShapeCollector {
+public class ShapeCollector{
     private List<Shape> shapes= new ArrayList<>();
 
 
