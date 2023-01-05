@@ -12,7 +12,7 @@ import java.util.Map;
 import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 
-public class WeatherForecastTestSuite  {
+public class WeatherForecastTestSuite {
     @Mock
     private Temperatures temperaturesMock;
 
