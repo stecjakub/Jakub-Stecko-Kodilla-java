@@ -1,5 +1,7 @@
 package com.kodilla.exception.test;
 
+import java.util.Objects;
+
 public class Flight {
     private String departureAirport;
     private String arrivalAirport;
@@ -16,4 +18,5 @@ public class Flight {
     public String getArrivalAirport() {
         return arrivalAirport;
     }
+
 }

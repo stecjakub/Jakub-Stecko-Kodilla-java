@@ -11,5 +11,9 @@ public class FlightFind {
         airPortsList.put("Moscow", false);
         airPortsList.put("Paris", true);
         airPortsList.put("New York", true);
+
+        if(airPortsList.get(flight.getArrivalAirport()) == false){
+            throw new RouteNotFoundException();
+        }
     }
 }
