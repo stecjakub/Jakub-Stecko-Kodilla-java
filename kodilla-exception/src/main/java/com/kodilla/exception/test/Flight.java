@@ -2,7 +2,7 @@ package com.kodilla.exception.test;
 
 import java.util.Objects;
 
-public class Flight {
+public class Flight{
     private String departureAirport;
     private String arrivalAirport;
 
