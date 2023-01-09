@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookLibrary {
-    LibraryDatabase libraryDatabase;
+    /*LibraryDatabase libraryDatabase;
 
     public BookLibrary(LibraryDatabase libraryDatabase) {
         this.libraryDatabase = libraryDatabase;
@@ -21,7 +21,9 @@ public class BookLibrary {
     }
     public List<Book> listBooksInHandsOf(LibraryUser libraryUser){
         List<Book> listBooks = new ArrayList<>();
-        if(libraryUser))
+        if(libraryUser));
 
     }
+
+     */
 }
