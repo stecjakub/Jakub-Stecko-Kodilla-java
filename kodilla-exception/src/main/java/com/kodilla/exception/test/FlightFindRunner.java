@@ -8,7 +8,6 @@ public class FlightFindRunner {
             flightFind.findFlight(flight);
         }catch(RouteNotFoundException e ){
             System.out.println("Flight doesn't exist" + e);
-
         }
     }
 }

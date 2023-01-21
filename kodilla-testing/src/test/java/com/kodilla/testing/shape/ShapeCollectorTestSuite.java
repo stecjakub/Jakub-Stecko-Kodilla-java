@@ -51,9 +51,6 @@ public class ShapeCollectorTestSuite {
         @Test
         public void testGetElementThatDoesNotExist(){
             ShapeCollector shapeCollector = new ShapeCollector();
-            Circle c = new Circle();
-            Square s = new Square();
-            Triangle t = new Triangle();
 
             Shape shape = shapeCollector.getFigure(0);
 

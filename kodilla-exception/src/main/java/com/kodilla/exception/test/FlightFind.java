@@ -12,7 +12,7 @@ public class FlightFind{
         airPortsList.put("Paris", true);
         airPortsList.put("New York", true);
 
-        if(airPortsList.get(flight.getArrivalAirport()) == false){
+        if(!airPortsList.get(flight.getArrivalAirport())){
             throw new RouteNotFoundException();
         }
     }

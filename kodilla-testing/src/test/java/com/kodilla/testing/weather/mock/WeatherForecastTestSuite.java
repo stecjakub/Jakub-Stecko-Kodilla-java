@@ -58,7 +58,6 @@ public class WeatherForecastTestSuite {
         average /= map.size();
 
         System.out.println(average);
-
         //Then
         Assertions.assertEquals(26.560000000000002, average);
     }
@@ -68,7 +67,6 @@ public class WeatherForecastTestSuite {
         //Given
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
         double median;
-
         //When
         Map<String, Double> map = weatherForecast.calculateForecast();
         List<Double> sorted = map.values().stream().sorted().collect(Collectors.toList());
@@ -78,7 +76,6 @@ public class WeatherForecastTestSuite {
         else {
             median = .5 * (sorted.get(sorted.size() / 2) + sorted.get(sorted.size() / 2 + 1));
         }
-
         //Then
         Assertions.assertEquals(27.1, median);
     }

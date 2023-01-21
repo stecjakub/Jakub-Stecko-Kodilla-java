@@ -12,7 +12,7 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
 public class BookDirectoryTestSuite {
-    /*
+
     private List<Book> generateListOfNBooks(int booksQuantity) {
         List<Book> resultList = new ArrayList<>();
         for (int n = 1; n <= booksQuantity; n++) {
@@ -87,19 +87,45 @@ public class BookDirectoryTestSuite {
         assertTrue(false);
     }
     @Test
-    void listBooksInHandsOf0(){
+    void testListBooksInHandsIfEmpty() {
+        //Given
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
+        List<Book> resultListOf0Books = new ArrayList<>();
+        LibraryUser libraryUser = new LibraryUser("John","Smith","1");
+        when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(resultListOf0Books);
 
+        //When
+        List<Book> theListOfBooks = bookLibrary.listBooksInHandsOf(libraryUser);
+
+        //Then
+        assertEquals(0,theListOfBooks.size());
     }
+
     @Test
-    void listBooksInHandsOf1(){
+    void testListBooksInHandsIf1Book() {
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
+        List<Book> resultListOf1Books = generateListOfNBooks(1);
+        LibraryUser libraryUser = new LibraryUser("John","Smith","1");
+        when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(resultListOf1Books);
 
+        List<Book> theListOfBooks = bookLibrary.listBooksInHandsOf(libraryUser);
+
+        assertEquals(1,theListOfBooks.size());
     }
+
     @Test
-    void listBooksInHandsOf5(){
+    void testListBooksInHandsIf5Books() {
+        //Given
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
+        List<Book> resultListOf5Books = generateListOfNBooks(5);
+        LibraryUser libraryUser = new LibraryUser("John","Smith","1");
+        when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(resultListOf5Books);
 
+        //When
+        List<Book> theListOfBooks = bookLibrary.listBooksInHandsOf(libraryUser);
+
+        //Then
+        assertEquals(5,theListOfBooks.size());
     }
-
-     */
 
 }

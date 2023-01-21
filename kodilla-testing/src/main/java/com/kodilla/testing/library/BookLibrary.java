@@ -1,10 +1,11 @@
 package com.kodilla.testing.library;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class BookLibrary {
-    /*LibraryDatabase libraryDatabase;
+    LibraryDatabase libraryDatabase;
 
     public BookLibrary(LibraryDatabase libraryDatabase) {
         this.libraryDatabase = libraryDatabase;
@@ -20,10 +21,7 @@ public class BookLibrary {
         return bookList;
     }
     public List<Book> listBooksInHandsOf(LibraryUser libraryUser){
-        List<Book> listBooks = new ArrayList<>();
-        if(libraryUser));
+        return libraryDatabase.listBooksInHandsOf(libraryUser);
 
     }
-
-     */
 }
