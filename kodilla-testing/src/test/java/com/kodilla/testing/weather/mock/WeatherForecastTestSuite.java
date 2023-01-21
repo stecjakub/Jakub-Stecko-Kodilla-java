@@ -76,6 +76,7 @@ public class WeatherForecastTestSuite {
         else {
             median = .5 * (sorted.get(sorted.size() / 2) + sorted.get(sorted.size() / 2 + 1));
         }
+
         //Then
         Assertions.assertEquals(27.1, median);
     }

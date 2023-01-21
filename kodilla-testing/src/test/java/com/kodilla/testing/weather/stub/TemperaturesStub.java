@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TemperaturesStub {
-    //@Override
     public Map<String, Double> getTemperatures() {
 
         Map<String, Double> stubResult = new HashMap<>();
