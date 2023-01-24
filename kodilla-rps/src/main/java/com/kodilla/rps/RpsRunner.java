@@ -8,6 +8,7 @@ public class RpsRunner {
         String r = "rock";
         String p = "paper";
         String s = "scissors";
+        String stop = "stop";
 
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
@@ -21,6 +22,7 @@ public class RpsRunner {
 
         System.out.println("Welcome" + "\n" + "You play Rock-Paper-Scissors game");
         while (!end) {
+            System.out.println("Choose from three different option: " + "\n" + "rock, paper or scissors");
             userPlay = scanner.nextLine();
 
             number = random.nextInt(3);
@@ -29,7 +31,7 @@ public class RpsRunner {
             System.out.println("Your move: " + userPlay + "\n" + "Computer Move: " + computerPlay);
 
             if (userPlay.equals(computerPlay)) {
-                System.out.println("Try once again!");
+                System.out.println("TIE! Try once again!");
             } else if (userPlay.equals(r) && computerPlay.equals(s)) {
                 System.out.println("You win !");
 
@@ -47,7 +49,10 @@ public class RpsRunner {
 
             } else if (userPlay.equals(p) && computerPlay.equals(r)) {
                 System.out.println("Computer wins !");
-            } else {
+            } else if (userPlay.equals(stop)) {
+            end = true;
+            }
+            else {
                 System.out.println("Invalid game! ");
             }
 
