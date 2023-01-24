@@ -13,6 +13,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
+
 public class StatisticsTestSuite {
     @Mock
     private Statistics statistics;
@@ -139,4 +140,5 @@ public class StatisticsTestSuite {
             assertEquals(5, statisticsCalculation.getAveragePostsPerUser(), 0.1);
         }
     }
+
 }
