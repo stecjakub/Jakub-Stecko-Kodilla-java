@@ -6,4 +6,5 @@ public interface Statistics {
     List<String> usersNames();
     int postsCount();
     int commentsCount();
+
 }
