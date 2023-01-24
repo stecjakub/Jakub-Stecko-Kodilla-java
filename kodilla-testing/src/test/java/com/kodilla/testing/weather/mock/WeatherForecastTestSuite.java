@@ -49,17 +49,10 @@ public class WeatherForecastTestSuite {
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
 
         //When
-        Map<String, Double> map = weatherForecast.calculateForecast();
-        double average = 0;
-        for (Map.Entry<String, Double> temp :
-                map.entrySet()) {
-            average += temp.getValue();
-        }
-        average /= map.size();
+        double average = weatherForecast.calculateAverage(temperaturesMock.getTemperatures());
 
-        System.out.println(average);
         //Then
-        Assertions.assertEquals(26.560000000000002, average);
+        Assertions.assertEquals(25.560000000000002, average);
     }
 
     @Test
@@ -68,16 +61,10 @@ public class WeatherForecastTestSuite {
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
         double median;
         //When
-        Map<String, Double> map = weatherForecast.calculateForecast();
-        List<Double> sorted = map.values().stream().sorted().collect(Collectors.toList());
 
-        if (sorted.size() % 2 == 1)
-            median = sorted.get(sorted.size() / 2 + 1);
-        else {
-            median = .5 * (sorted.get(sorted.size() / 2) + sorted.get(sorted.size() / 2 + 1));
-        }
+        median = weatherForecast.calculateMedian(temperaturesMock.getTemperatures());
 
         //Then
-        Assertions.assertEquals(27.1, median);
+        Assertions.assertEquals(25.5, median);
     }
 }
