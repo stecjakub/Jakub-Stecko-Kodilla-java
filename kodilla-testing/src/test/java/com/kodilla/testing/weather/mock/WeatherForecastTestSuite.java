@@ -48,7 +48,7 @@ public class WeatherForecastTestSuite {
         //Given
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
 
-        //When
+
         Map<String, Double> map = weatherForecast.calculateForecast();
         double average = 0;
         for (Map.Entry<String, Double> temp :

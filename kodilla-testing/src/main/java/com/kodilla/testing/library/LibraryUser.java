@@ -51,6 +51,7 @@ public class LibraryUser {
 
     @Override
     public int hashCode() {
+
         return Objects.hash(firstname, lastname, peselId);
     }
 }
