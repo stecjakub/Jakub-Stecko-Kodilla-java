@@ -10,4 +10,5 @@ public interface LibraryDatabase {
     boolean rentABook(LibraryUser libraryUser, Book book);
 
     int returnBooks(LibraryUser libraryUser);
+
 }

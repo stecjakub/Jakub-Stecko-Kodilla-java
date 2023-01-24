@@ -1,7 +1,9 @@
 package com.kodilla.testing.library;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
+@ExtendWith(MockitoExtension.class)
 public class BookDirectoryTestSuite {
 
     private List<Book> generateListOfNBooks(int booksQuantity) {
@@ -43,7 +46,6 @@ public class BookDirectoryTestSuite {
 
         // Then
         assertEquals(4, theListOfBooks.size());
-        assertTrue(false);
     }
 
     @Test
@@ -69,11 +71,12 @@ public class BookDirectoryTestSuite {
         assertEquals(0, theListOfBooks0.size());
         assertEquals(15, theListOfBooks15.size());
         assertEquals(0, theListOfBooks40.size());
-        assertTrue(false);
+
     }
 
     @Test
     void testListBooksWithConditionFragmentShorterThan3() {
+
         // Given
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
@@ -84,7 +87,7 @@ public class BookDirectoryTestSuite {
         // Then
         assertEquals(0, theListOfBooks10.size());
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
-        assertTrue(false);
+
     }
     @Test
     void testListBooksInHandsIfEmpty() {
@@ -100,7 +103,6 @@ public class BookDirectoryTestSuite {
         //Then
         assertEquals(0,theListOfBooks.size());
     }
-
     @Test
     void testListBooksInHandsIf1Book() {
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
@@ -127,5 +129,4 @@ public class BookDirectoryTestSuite {
         //Then
         assertEquals(5,theListOfBooks.size());
     }
-
 }

@@ -4,44 +4,44 @@ public class StatisticsCalculation {
     private double numberOfUsers;
     private double numberOfPosts;
     private double numberOfComments;
-    private double averagePostsUser;
-    private double averageCommentsUser;
-    private double averageCommentsPost;
+    private double averagePostsPerUser;
+    private double averageCommentsPerUser;
+    private double averageCommentsPerPost;
 
     public void calculateAdvStatistics(Statistics statistics) {
         numberOfUsers = statistics.usersNames().size();
         numberOfPosts = statistics.postsCount();
         numberOfComments = statistics.commentsCount();
         if (numberOfUsers > 0) {
-            averagePostsUser = numberOfPosts / numberOfUsers;
-            averageCommentsUser = numberOfComments / numberOfUsers;
+            averagePostsPerUser = numberOfPosts / numberOfUsers;
+            averageCommentsPerUser = numberOfComments / numberOfUsers;
         } else {
-            averagePostsUser = 0;
-            averageCommentsUser = 0;
+            averagePostsPerUser = 0;
+            averageCommentsPerUser = 0;
         }
         if (numberOfPosts > 0)
-            averageCommentsPost = numberOfComments / numberOfPosts;
+            averageCommentsPerPost = numberOfComments / numberOfPosts;
         else
-            averageCommentsPost = 0;
+            averageCommentsPerPost = 0;
     }
 
-    public double getAveragePostsUser() {
-        return averagePostsUser;
+    public double getAveragePostsPerUser() {
+        return averagePostsPerUser;
     }
 
-    public double getAverageCommentsUser() {
-        return averageCommentsUser;
+    public double getAverageCommentsPerUser() {
+        return averageCommentsPerUser;
     }
 
-    public double getAverageCommentsPost() {
-        return averageCommentsPost;
+    public double getAverageCommentsPerPost() {
+        return averageCommentsPerPost;
     }
     public void showStatistics() {
         System.out.println("NumberOfUsers = " + numberOfUsers);
         System.out.println("NumberOfPosts = " + numberOfPosts);
         System.out.println("NumberOfComments = " + numberOfComments);
-        System.out.println("AveragePostPerUser = " + averagePostsUser);
-        System.out.println("AverageCommentsPerUser = " + averageCommentsUser);
-        System.out.println("AverageCommentsPerPost = " + averageCommentsPost);
+        System.out.println("AveragePostPerUser = " + averagePostsPerUser);
+        System.out.println("AverageCommentsPerUser = " + averageCommentsPerUser);
+        System.out.println("AverageCommentsPerPost = " + averageCommentsPerPost);
     }
 }

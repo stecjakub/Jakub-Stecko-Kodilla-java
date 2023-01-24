@@ -36,7 +36,6 @@ public class Book {
     public void setPublicationYear(int publicationYear) {
         this.publicationYear = publicationYear;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
