@@ -46,6 +46,7 @@ public class WeatherForecastTestSuite {
     @Test
     void testAverageWithMock() {
         //Given
+
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
 
         //When

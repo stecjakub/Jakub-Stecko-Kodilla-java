@@ -32,6 +32,7 @@ public class WeatherForecast {
             medianList.add(temperature.getValue());
         }
 
+
         Collections.sort(medianList);
         double median;
 
