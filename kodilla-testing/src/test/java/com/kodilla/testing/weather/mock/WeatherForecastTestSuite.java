@@ -49,8 +49,19 @@ public class WeatherForecastTestSuite {
 
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
 
+<<<<<<< HEAD
         //When
         double average = weatherForecast.calculateAverage(temperaturesMock.getTemperatures());
+=======
+
+        Map<String, Double> map = weatherForecast.calculateForecast();
+        double average = 0;
+        for (Map.Entry<String, Double> temp :
+                map.entrySet()) {
+            average += temp.getValue();
+        }
+        average /= map.size();
+>>>>>>> e6366ea3253d9801d73135e5d6880464a89602d5
 
         //Then
         Assertions.assertEquals(25.560000000000002, average);
