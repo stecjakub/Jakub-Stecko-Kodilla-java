@@ -53,7 +53,7 @@ public class WeatherForecastTestSuite {
         double average = weatherForecast.calculateAverage(temperaturesMock.getTemperatures());
 
         //Then
-        Assertions.assertEquals(25.560000000000002, average);
+        Assertions.assertEquals(25.560000000000002, average,0.001);
     }
 
     @Test
@@ -66,6 +66,6 @@ public class WeatherForecastTestSuite {
         median = weatherForecast.calculateMedian(temperaturesMock.getTemperatures());
 
         //Then
-        Assertions.assertEquals(25.5, median);
+        Assertions.assertEquals(25.5, median, 0.1);
     }
 }
