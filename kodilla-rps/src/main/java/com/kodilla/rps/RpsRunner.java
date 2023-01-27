@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class RpsRunner {
     public static void main(String[] args) {
+
         String r = "rock";
         String p = "paper";
         String s = "scissors";
-        String stop = "stop";
 
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
@@ -30,34 +30,19 @@ public class RpsRunner {
 
             System.out.println("Your move: " + userPlay + "\n" + "Computer Move: " + computerPlay);
 
-            if (userPlay.equals(computerPlay)) {
-                System.out.println("TIE! Try once again!");
-            } else if (userPlay.equals(r) && computerPlay.equals(s)) {
-                System.out.println("You win !");
-
-            } else if (userPlay.equals(r) && computerPlay.equals(p)) {
-                System.out.println("Computer win !");
-
-            } else if (userPlay.equals(s) && computerPlay.equals(p)) {
-                System.out.println("You win !");
-
-            } else if (userPlay.equals(s) && computerPlay.equals(r)) {
-                System.out.println("Computer win !");
-
-            } else if (userPlay.equals(p) && computerPlay.equals(s)) {
-                System.out.println("Computer win !");
-
-            } else if (userPlay.equals(p) && computerPlay.equals(r)) {
-                System.out.println("Computer wins !");
-            } else if (userPlay.equals(stop)) {
-            end = true;
+            if (userPlay.equals(r) && computerPlay.equals(s) ||
+                    userPlay.equals(s) && computerPlay.equals(p) ||
+                    userPlay.equals(p) && computerPlay.equals(r)) {
+                System.out.println("User win");
+            } else if (userPlay.equals(s) && computerPlay.equals(r) ||
+                    userPlay.equals(r) && computerPlay.equals(p) ||
+                    userPlay.equals(p) && computerPlay.equals(s)) {
+                System.out.println("Computer Win");
+            } else if (userPlay.equals(computerPlay)) {
+                System.out.println("Tie!");
+            }else {
+                System.out.println("Invalid Game");
             }
-            else {
-                System.out.println("Invalid game! ");
-            }
-
-            System.out.println();
-
         }
     }
 }
