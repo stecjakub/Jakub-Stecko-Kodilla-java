@@ -5,6 +5,5 @@ import com.kodilla.good.paterns.challenges.user.User;
 
 public interface Order {
     User getUser();
-
     Product getProduct();
 }

@@ -5,11 +5,10 @@ import com.kodilla.good.paterns.challenges.user.User;
 
 import java.time.LocalDate;
 
-public class OrderRequest implements Order{
+public class OrderRequest implements Order {
     private User user;
     private Product product;
     private int quantity;
-
     public OrderRequest(User user, Product product, int quantity) {
         this.user = user;
         this.product = product;

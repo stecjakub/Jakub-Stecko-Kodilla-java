@@ -1,19 +1,20 @@
 package com.kodilla.good.paterns.challenges.product;
 
-public class Toothbrush {
+public class Toothbrush implements Product{
     private String productName;
-    private int productPrice;
+    private double productPrice;
 
-    public Toothbrush(String productName, int productPrice) {
+    public Toothbrush(String productName, double productPrice) {
         this.productName = productName;
         this.productPrice = productPrice;
     }
-
+    @Override
     public String getProductName() {
         return productName;
     }
 
-    public int getProductPrice() {
+    @Override
+    public double getProductPrice() {
         return productPrice;
     }
 }

@@ -4,6 +4,5 @@ import java.time.LocalDate;
 
 public interface OrderRepository {
     void createOrder(Order order, LocalDate localDate);
-
     void showOrder();
 }

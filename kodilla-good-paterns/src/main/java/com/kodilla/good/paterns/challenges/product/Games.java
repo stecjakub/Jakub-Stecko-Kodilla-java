@@ -1,6 +1,6 @@
 package com.kodilla.good.paterns.challenges.product;
 
-public class Games implements Product{
+public class Games implements Product {
     private String productName;
     private double productPrice;
 
