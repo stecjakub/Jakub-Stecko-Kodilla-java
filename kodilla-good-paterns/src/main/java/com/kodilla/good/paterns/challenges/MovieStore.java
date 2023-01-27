@@ -28,13 +28,12 @@ public class MovieStore {
         return booksTitlesWithTranslations;
 
     }
-    /*public static void main(String[] args){
+    public static void main(String[] args){
 
         String moviesList;
-        moviesList = MovieStore.getMovies().entrySet().stream().flatMap(movie->movie.getValue().
+        MovieStore movieStore = new MovieStore();
+        moviesList = movieStore.getMovies().entrySet().stream().flatMap(movie->movie.getValue().
                 stream()).collect(Collectors.joining("!"));
         System.out.println(moviesList);
     }
-
-     */
 }
