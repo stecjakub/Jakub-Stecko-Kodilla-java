@@ -36,7 +36,7 @@ public class WeatherForecast {
         double median;
 
         if (medianList.size() % 2 == 0) {
-            median = (medianList.get(medianList.size() / 2) + medianList.get(medianList.size() / 2));
+            median = (medianList.get(medianList.size() / 2) + medianList.get(medianList.size() / 2 - 1)) / 2;
         } else {
             median = medianList.get(medianList.size() / 2);
         }

@@ -64,6 +64,7 @@ public class WeatherForecastTestSuite {
         //When
 
         median = weatherForecast.calculateMedian(temperaturesMock.getTemperatures());
+        System.out.println(median);
 
         //Then
         Assertions.assertEquals(25.5, median, 0.1);
