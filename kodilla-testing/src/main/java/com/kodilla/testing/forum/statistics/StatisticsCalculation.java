@@ -43,5 +43,6 @@ public class StatisticsCalculation {
         System.out.println("AveragePostPerUser = " + averagePostsPerUser);
         System.out.println("AverageCommentsPerUser = " + averageCommentsPerUser);
         System.out.println("AverageCommentsPerPost = " + averageCommentsPerPost);
+
     }
 }
