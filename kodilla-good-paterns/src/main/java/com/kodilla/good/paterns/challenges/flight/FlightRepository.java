@@ -9,7 +9,7 @@ public class FlightRepository {
     public FlightRepository(){
 
         flights.add(new AirFlight("Warszawa", "Gdańsk"));
-        flights.add(new AirFlight("Wrocław", "Kraków"));
+        flights.add(new AirFlight("Gdańsk", "Oslo"));
         flights.add(new AirFlight("Katowice", "Wiedeń"));
         flights.add(new AirFlight("Madryt", "Rzym"));
         flights.add(new AirFlight("Londyn", "Waszyngton"));

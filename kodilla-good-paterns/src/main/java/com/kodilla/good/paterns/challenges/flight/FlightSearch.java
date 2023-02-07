@@ -15,4 +15,8 @@ public class FlightSearch {
     public List<Flight> airFlightArrival (String Arrival) {
         return flightRepository.getFlights().stream().filter(f->f.getArrival().equals(Arrival)).collect(Collectors.toList());
     }
+    public List<Flight> airFlightWithChange (String Destination, String Arrival,String Change){
+        return flightRepository.getFlights().stream().filter(f->f.getDestination().equals(Destination) && f.getArrival().equals(Arrival)
+                || f.getDestination().equals(Change) && f.getArrival().equals(Arrival)).collect(Collectors.toList());
+    }
 }

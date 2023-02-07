@@ -1,5 +1,6 @@
 package com.kodilla.good.paterns.challenges.flight;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 
@@ -10,6 +11,7 @@ public class FlightResults {
         this.flightList = flightList;
     }
     public void showFlights(){
-        flightList.stream().map(f->f.getArrival() + f.getArrival()).forEach(System.out::println);
+        flightList.stream().map(f->f.getArrival() + " - " + f.getDestination()).forEach(System.out::println);
+
     }
 }
