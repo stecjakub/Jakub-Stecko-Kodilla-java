@@ -37,7 +37,6 @@ public class TasksList {
         return Objects.equals(name, tasksList.name) &&
                 Objects.equals(tasks, tasksList.tasks);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(name, tasks);

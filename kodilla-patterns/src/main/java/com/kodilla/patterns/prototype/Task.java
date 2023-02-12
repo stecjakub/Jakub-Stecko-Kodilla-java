@@ -25,7 +25,6 @@ public final class Task {
         Task task = (Task) o;
         return Objects.equals(name, task.name);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(name);

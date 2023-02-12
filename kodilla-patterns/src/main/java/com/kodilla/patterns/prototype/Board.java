@@ -5,7 +5,6 @@ import java.util.Objects;
 import java.util.Set;
 
 public class Board extends Prototype<Board> {
-
     private String name;
     private Set<TasksList> lists = new HashSet<>();
 

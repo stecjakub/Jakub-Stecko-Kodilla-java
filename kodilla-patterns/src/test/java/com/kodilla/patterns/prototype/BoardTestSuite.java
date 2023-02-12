@@ -53,7 +53,6 @@ public class BoardTestSuite {
         } catch (CloneNotSupportedException e) {
             System.out.println(e);
         }
-
         //When
         board.getLists().remove(listToDo);
 

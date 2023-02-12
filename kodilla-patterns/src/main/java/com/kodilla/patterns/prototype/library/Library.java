@@ -19,7 +19,6 @@ public class Library extends Prototype <Library> {
     public String getName() {
         return name;
     }
-
     public Set<Book> getBooks() {
         return books;
     }

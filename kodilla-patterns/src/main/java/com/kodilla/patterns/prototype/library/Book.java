@@ -12,7 +12,6 @@ public class Book {
         this.author = author;
         this.publicationDate = publicationDate;
     }
-
     public String getTitle() {
         return title;
     }
