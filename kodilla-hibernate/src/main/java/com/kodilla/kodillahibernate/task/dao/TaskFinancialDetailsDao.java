@@ -1,2 +1,14 @@
-package com.kodilla.kodillahibernate.task.dao;public class TaskFinancialDetailsDao {
+package com.kodilla.kodillahibernate.task.dao;
+
+import com.kodilla.kodillahibernate.task.TaskFinancialDetails;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import javax.transaction.Transactional;
+import java.util.List;
+
+@Repository
+@Transactional
+public interface TaskFinancialDetailsDao extends CrudRepository<TaskFinancialDetails, Integer> {
+    List<TaskFinancialDetails> findByPaid(boolean paid);
 }
