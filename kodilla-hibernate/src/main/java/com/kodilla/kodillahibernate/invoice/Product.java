@@ -18,7 +18,6 @@ public class Product {
     public Product(String name) {
         this.name = name;
     }
-
     @Id
     @GeneratedValue
     @NotNull

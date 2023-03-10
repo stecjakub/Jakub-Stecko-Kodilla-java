@@ -16,7 +16,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 @SpringBootTest
 public class InvoiceDaoTestSuite {
-    /*
 
     @Autowired
     private ProductDao productDao;
@@ -34,7 +33,7 @@ public class InvoiceDaoTestSuite {
         item1.setInvoice(invoice1);
 
         //When
-        productDao.save(invoice1);
+        productDao.save(product1);
         int invoice1Id = invoice1.getId();
 
         //Then
@@ -44,5 +43,4 @@ public class InvoiceDaoTestSuite {
         productDao.deleteAll();
     }
 
-     */
 }

@@ -22,7 +22,6 @@ public final class Item {
         this.quantity = quantity;
         this.value = value;
     }
-
     @Id
     @GeneratedValue
     @NotNull

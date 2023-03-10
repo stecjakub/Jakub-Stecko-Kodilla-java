@@ -18,7 +18,6 @@ public class Invoice {
     public Invoice(String number) {
         this.number = number;
     }
-
     @Id
     @NotNull
     @GeneratedValue
